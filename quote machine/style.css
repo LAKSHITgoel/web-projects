@@ -1,0 +1,31 @@
+.jumbotron{
+    padding:30px 30px 70px 0px;
+    background-color: #C37C7C;
+    color: floralwhite;
+    margin: 0px 0px 30px 0px;
+}
+body{
+    background-color: #CB9797;
+    margin: 0px 0px 0px 0px;
+
+}
+
+.row-content{
+    
+    padding: 20px 20px 20px 20px;
+}
+
+a {
+    font-weight:500;
+    text-decoration:none;
+    color:#fff;
+  }
+
+  #tweet-quote{
+      text-decoration: none;
+
+  }
+  #tweet-quote:hover{
+      opacity:0.9;
+      color:#fff;
+  }

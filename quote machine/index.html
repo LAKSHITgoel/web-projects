@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css"></link>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <header class="jumbotron">
+        <div class="container">
+            <h2>Quote machine</h2>
+        </div>
+        </header>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="container-fluid" style="background-color: #EFC5C5;border-radius:3px">
+                    <div class="row row-content">
+                        <div class="col-md-12 col-xs-12 col-sm-12">
+                            <i class="fa fa-quote-left fa-2x fa-pull-left" style="color:#CB9797" ></i>
+                            <p id="quote" style="color:slateblue;font-size:20px"></p>
+                        </div>
+                    </div>
+                    <div class="row row-content">
+                        <div class="col-md-2 col-xs-6 col-sm-6">
+                            <a href="https://twitter.com/intent/tweet" class="btn twitter-share-button" style="background-color:#55acee;" id="tweet-quote" target="_blank"><i class="fa fa-twitter"></i></a>
+                        </div>
+                        <div class="col-md-2 col-md-offset-7 col-xs-6 col-sm-6">
+                            <button type="button" class="btn btn-primary" id="new_quote">New quote</button>
+                        </div>
+                    </div>
+                </div>
+            </div>           
+        </div>
+        <script src="function.js"></script>
+        
+    </body>
+</html>
