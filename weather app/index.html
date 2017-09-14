@@ -6,12 +6,18 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Audiowide|Iceland|Monoton|Pacifico|Press+Start+2P|Vampiro+One' rel='stylesheet' type='text/css'>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="function.js"></script>
     </head>
     <body>
-        <p>Weather app</p>
-        <div >
+        <!-- container for map-->
+        <div id="container-map"></div>
+        <!-- weather data overlay-->
+        <div class="overlay">
+                <p id="heading-main">Weather app</p>
         </div>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADulfJYlL25oAbVAu8_lclD4TCxm893xA&callback=initMap"></script>    
     </body>
 </html>
