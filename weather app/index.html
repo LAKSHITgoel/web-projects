@@ -10,14 +10,54 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="function.js"></script>
     </head>
-    <body>
+    <body onload="initMap();">
         <!-- container for map-->
         <div id="container-map"></div>
         <!-- weather data overlay-->
         <div class="overlay">
                 <p id="heading-main">Weather app</p>
+                <p id="first-child"><span class="city"></span><span class="country"></span></p>
+                <p><span class="temp"></span><span id="temp-unit"></span></p>
+                <p><span class="desc"></span></p>
+                <div class="text-center all-icon">
+                    <div class="icon sun-shower hide ">
+                      <div class="cloud"></div>
+                      <div class="sun">
+                        <div class="rays"></div>
+                      </div>
+                      <div class="rain"></div>
+                    </div>
+                    <div class="icon thunder-storm hide thunderstom">
+                      <div class="cloud"></div>
+                      <div class="lightning">
+                        <div class="bolt"></div>
+                        <div class="bolt"></div>
+                      </div>
+                    </div>
+                    <div class="icon cloudy hide clouds">
+                      <div class="cloud"></div>
+                      <div class="cloud"></div>
+                    </div>
+                    <div class="icon flurries hide snow">
+                      <div class="cloud"></div>
+                      <div class="snow">
+                        <div class="flake"></div>
+                        <div class="flake"></div>
+                      </div>
+                    </div>
+                    <div class="icon sunny hide clear">
+                      <div class="sun">
+                        <div class="rays"></div>
+                      </div>
+                    </div>
+                    <div class="icon rainy hide rain">
+                      <div class="cloud"></div>
+                      <div class="rain"></div>
+                    </div>
+                  </div>
+                    <p style="margin:0px;font-size:12px;">Coded by <a href="https://codepen.io/LAKSHITgoel" style="text-decoration:none;color:blue;" target="_blank">LAKSHIT GOEL</a></p>
         </div>
-
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADulfJYlL25oAbVAu8_lclD4TCxm893xA&callback=initMap"></script>    
+    
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADulfJYlL25oAbVAu8_lclD4TCxm893xA"></script>    
     </body>
 </html>
