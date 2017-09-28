@@ -17,12 +17,12 @@ $(document).ready(function(){
                }
                curAuthor=r.author;
                    curQuote=r.quote;
-           $("#quote").html("<p>"+r.quote+"</p>" + "<br><p>— " + r.author + "</p>");
+           $("#quote").html("<p>"+r.quote+"</p>" + "<br><p>  &minus; " + r.author + "</p>");
            } 
        });
    });
    $("#tweet-quote").on("click",function(){
-       $("#tweet-quote").attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + curQuote + '" ' +"-"+curAuthor));
+       $("#tweet-quote").attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=LAKSHITgoel&text=' + encodeURIComponent('"' + curQuote + '" ' +"-"+curAuthor));
    });
 });
 

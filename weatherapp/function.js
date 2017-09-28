@@ -59,6 +59,7 @@
       {
           latitude= position.coords.latitude ; 
           longitude = position.coords.longitude;
+          console.log("lat: "+latitude+" "+"lon: "+longitude);
           getWeather(latitude,longitude);
       }
 

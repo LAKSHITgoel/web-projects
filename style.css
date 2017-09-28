@@ -18,11 +18,11 @@
     #PORTFOLIO:before{
 padding-top: 24px;
 color:#fff;
-      background-attachment: fixed;
-      background-image: url("bgimage.jpg");
+background-attachment: fixed;
+background-image: url("bgimage.jpg");
 -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
   background-size: cover;
 content: "";
   display: block;
@@ -34,10 +34,18 @@ content: "";
   z-index: -10;
 }
 
-
+  input{
+    opacity:0.8;
+  }
+  textarea{opacity:.8;}
+  textarea:hover{opacity:1;}
+  input:hover{
+    opacity:1;
+  }
 
     .contact-container{padding-top: 24px;}
-    #SOCIAL{background-color: rgb(170,170,170);}
+    #SOCIAL{background-color: rgb(170,170,170);
+    }
   [class*="col-"]{float:right;display: block}
   
   @media only screen and (min-width: 768px)

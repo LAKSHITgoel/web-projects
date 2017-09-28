@@ -1,0 +1,13 @@
+[
+    {
+        "name":"quote machine",
+        "image":"quotemachine/quote_machine.jpg",
+        "source":"quotemachine/index.html"
+    },
+
+    {
+        "name":"weather app",
+        "image":"weatherapp/weather_app.jpg",
+        "source":"weatherapp/index.html"        
+    }
+]

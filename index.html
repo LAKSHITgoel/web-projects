@@ -3,38 +3,52 @@
 	<title>LAKSHIT GOEL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-    #nav-item:hover{background-color: rgb(170,170,170);color:#722872;}
+    .nav-item:hover{background-color: rgb(170,170,170);color:#722872;}
   </style>
-
   <script>
-  $(document).ready(function(){
-  $('body').scrollspy({target:".navbar" , offset:50});   
+$(document).ready(function(){
+  var xhttp = new XMLHttpRequest();
+  xhttp.open('GET','data.json');
+  xhttp.onload = function(){
+   var myData = JSON.parse(xhttp.responseText);
+      console.log(myData);
+   renderHTML(myData);   
+  };
+  xhttp.send();
 
+  function renderHTML(data)
+  {
+    var dataContainer = document.getElementById('PORTFOLIO');
+      for(var i=0;i<data.length;i++)
+      {
+      dataContainer.innerHTML += '<div class="row"><div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2"><div class="thumbnail"><a href="' +data[i].source+ '"><img src="' +data[i].image+ '"></a></div></div></div><br>'
+      }
+  }
+
+  $('body').scrollspy({ target:".navbar" , offset:50});   
   $("#myNavbar a").on('click', function(event) {
       if (this.hash !== "") {
         event.preventDefault();
-
       // Store hash
       var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
+      // Using $'s animate() method to add smooth page scroll
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate(
       {
         scrollTop: $(hash).offset().top
       }, 800, function(){
-   
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
     }  // End if
   });
-  });
+});
   </script>
 </head>
 
@@ -52,9 +66,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a style="color:#fff;" id="nav-item" href="#ABOUT">ABOUT</a></li>
-        <li><a style="color:#fff;" id="nav-item" href="#PORTFOLIO">PORTFOLIO</a></li>
-        <li><a style="color:#fff;" id="nav-item" href="#CONTACT">CONTACT</a></li>
+        <li class="nav-item"><a style="color:#fff;" href="#ABOUT">ABOUT</a></li>
+        <li class="nav-item"><a style="color:#fff;" href="#PORTFOLIO">PORTFOLIO</a></li>
+        <li class="nav-item" style="background-color:#722872;"><a style="color:#fff;" href="#CONTACT">CONTACT</a></li>
       </ul>
     </div>
   </div>
@@ -75,25 +89,12 @@
 	</div>
   </div>
 </div>
-<div class="container-fluid" id="PORTFOLIO">	
-	<div class="container-fluid">
+<div class="container-fluid" id="PORTFOLIO">
 	<h1 class="text-center" style="color:#fff">PORTFOLIO</h1>
-	
-  <div class="row">
-
-  <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2"><div class="thumbnail"><a href="https://metagrobolized-appl.000webhostapp.com/project1/index.html"><img src="freddie.png"></a></div></div>
-  </div><br>
-  <div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2"><div class="thumbnail"><a href="https://metagrobolized-appl.000webhostapp.com/project2/index.html"><img src="niranjan.png"></a></div></div>
-  </div><br>
-  <div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2"><div class="thumbnail"><a href="https://metagrobolized-appl.000webhostapp.com/project2/advertise.html"><img src="digitalindia.png"></a></div></div>
-  </div><br>
-  </div>
 </div>
-<div class="container-fluid" id="CONTACT">
+<div class="container-fluid" style="padding:0;" id="CONTACT">
 
-  <div class="contact-container" style="background-color:rgba(80,30,80,0.8);">
+  <div class="contact-container" style="background-color:rgba(80,30,80,.9);">
   <div class="text-center lead" style="color:#fff;">
 	
   <h1 class="text-center">CONTACT</h1>
@@ -110,17 +111,15 @@
    <br>
    <input id="number" type="number" class="form-control" name="Phone no." placeholder="Your Number...">
    <br>
-   <textarea id="message" class="form-control" name="message" placeholder="Write Something">
-   </textarea>
+   <textarea id="message" class="form-control" name="message" placeholder="Write Something"></textarea>
   <br>
      <button id="submit" class="btn btn-primary btn-block">Submit</button>   
      <br>
  </form>
  </div>
 </div>
-<div id="SOCIAL">
-	
- <div class="lead text-center container" style="padding-top:40px;">
+<div id="SOCIAL">	
+ <div class="lead text-center container-fluid" style="padding-top:40px;margin:0;">
  <h1 class="">AROUND THE WEB</h1>
   <p style="font-size: 20px;">Follow me on</p>
   <ul class="social">
